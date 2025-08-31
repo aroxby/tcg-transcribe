@@ -1,0 +1,21 @@
+{
+    "save_id": 1134384449224737039,
+    "hub_id": 0,
+    "gate": 0,
+    "delay": 0,
+    "menu_visible": 1,
+    "clock_speed": 100000,
+    "dependencies": [],
+    "description": "",
+    "camera_position": {
+        "x": 0,
+        "y": 0
+    },
+    "synced": 0,
+    "campaign_bound": 0,
+    "architecture_score": 0,
+    "player_data": [],
+    "hub_description": "",
+    "components": [],
+    "wires": []
+}

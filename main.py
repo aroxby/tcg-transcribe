@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import json
 import sys
 
 import snappy
@@ -8,10 +9,19 @@ from seri.serializers import Serializer
 from components import Kind
 
 
-def is_custom_component(_s, _n, _f, attrs, _data, _offset):
+def is_custom_component_d(_ser, _name, _field, attrs, _data, _offset):
     return attrs["kind"] == Kind.Custom
 
-def is_program_component(_s, _n, _f, attrs, _data, _offset):
+
+def is_program_component_d(_ser, _name, _field, attrs, _data, _offset):
+    return attrs["kind"] in [Kind.Program8_1, Kind.Program8_4, Kind.Program]
+
+
+def is_custom_component_s(_ser, _name, _field, attrs, _data,):
+    return attrs["kind"] == Kind.Custom
+
+
+def is_program_component_s(_ser, _name, _field, attrs, _data):
     return attrs["kind"] in [Kind.Program8_1, Kind.Program8_4, Kind.Program]
 
 
@@ -57,13 +67,14 @@ class TCGComponentSerializer(Serializer):
     setting_1 = fields.UInt64()
     setting_2 = fields.UInt64()
     ui_order = fields.UInt16()
-    custom_id = fields.UInt64(deserialize_predicate=is_custom_component)
-    custom_displacement =  fields.NestedSerializer(TCGPointSerialier(), deserialize_predicate=is_custom_component)
+    custom_id = fields.UInt64(deserialize_predicate=is_custom_component_d, serialize_predicate=is_custom_component_s)
+    custom_displacement =  fields.NestedSerializer(TCGPointSerialier(), deserialize_predicate=is_custom_component_d, serialize_predicate=is_custom_component_s)
     programs =  fields.EncodedLength(
         fields.UInt16(), fields.DynamicList(
             fields.NestedSerializer(TCGProgramSerializer()),
         ),
-        deserialize_predicate=is_program_component,
+        deserialize_predicate=is_program_component_d,
+        serialize_predicate=is_program_component_s,
     )
 
 
@@ -102,8 +113,8 @@ def main(argv):
         compressed = src.read()
     decompressed = snappy.uncompress(compressed)
 
-    attrs = TCGSerialier().deserialize(decompressed)
-    print(attrs)
+    attrs, _ = TCGSerialier().deserialize(decompressed)
+    print(json.dumps(attrs, indent=4))
 
 
 if __name__ == "__main__":

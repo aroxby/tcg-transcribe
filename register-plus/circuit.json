@@ -1,0 +1,259 @@
+{
+    "save_id": 688062441,
+    "hub_id": 0,
+    "gate": 0,
+    "delay": 0,
+    "menu_visible": 1,
+    "clock_speed": 100000,
+    "dependencies": [],
+    "description": "",
+    "camera_position": {
+        "x": 0,
+        "y": 0
+    },
+    "synced": 0,
+    "campaign_bound": 0,
+    "architecture_score": 0,
+    "player_data": [],
+    "hub_description": "",
+    "components": [
+        {
+            "kind": 23,
+            "position": {
+                "x": 65533,
+                "y": 0
+            },
+            "rotation": 0,
+            "permanent_id": 1,
+            "custom_string": "",
+            "setting_1": 0,
+            "setting_2": 0,
+            "ui_order": 0
+        },
+        {
+            "kind": 2,
+            "position": {
+                "x": 65531,
+                "y": 65528
+            },
+            "rotation": 0,
+            "permanent_id": 2,
+            "custom_string": "",
+            "setting_1": 0,
+            "setting_2": 0,
+            "ui_order": 0
+        },
+        {
+            "kind": 87,
+            "position": {
+                "x": 5,
+                "y": 5
+            },
+            "rotation": 0,
+            "permanent_id": 5,
+            "custom_string": "Always output",
+            "setting_1": 0,
+            "setting_2": 0,
+            "ui_order": 0
+        },
+        {
+            "kind": 75,
+            "position": {
+                "x": 65525,
+                "y": 5
+            },
+            "rotation": 0,
+            "permanent_id": 6,
+            "custom_string": "Save value",
+            "setting_1": 2,
+            "setting_2": 0,
+            "ui_order": 0
+        },
+        {
+            "kind": 70,
+            "position": {
+                "x": 65525,
+                "y": 0
+            },
+            "rotation": 0,
+            "permanent_id": 7,
+            "custom_string": "Save",
+            "setting_1": 2,
+            "setting_2": 0,
+            "ui_order": 0
+        },
+        {
+            "kind": 70,
+            "position": {
+                "x": 65525,
+                "y": 65527
+            },
+            "rotation": 0,
+            "permanent_id": 8,
+            "custom_string": "Load",
+            "setting_1": 2,
+            "setting_2": 0,
+            "ui_order": 0
+        },
+        {
+            "kind": 116,
+            "position": {
+                "x": 65533,
+                "y": 65531
+            },
+            "rotation": 0,
+            "permanent_id": 16,
+            "custom_string": "1:1",
+            "setting_1": 0,
+            "setting_2": 0,
+            "ui_order": 0
+        },
+        {
+            "kind": 141,
+            "position": {
+                "x": 5,
+                "y": 0
+            },
+            "rotation": 0,
+            "permanent_id": 3587491547824661070,
+            "custom_string": "",
+            "setting_1": 0,
+            "setting_2": 0,
+            "ui_order": 0
+        }
+    ],
+    "wires": [
+        {
+            "kind": 0,
+            "color": 0,
+            "comment": "",
+            "path": {
+                "x": 65526,
+                "y": 65527
+            },
+            "segments": [
+                9,
+                0
+            ]
+        },
+        {
+            "kind": 0,
+            "color": 0,
+            "comment": "",
+            "path": {
+                "x": 65526,
+                "y": 0
+            },
+            "segments": [
+                6,
+                0
+            ]
+        },
+        {
+            "kind": 1,
+            "color": 0,
+            "comment": "",
+            "path": {
+                "x": 65534,
+                "y": 0
+            },
+            "segments": [
+                69,
+                0
+            ]
+        },
+        {
+            "kind": 1,
+            "color": 0,
+            "comment": "",
+            "path": {
+                "x": 65534,
+                "y": 5
+            },
+            "segments": [
+                6,
+                0
+            ]
+        },
+        {
+            "kind": 1,
+            "color": 0,
+            "comment": "",
+            "path": {
+                "x": 65532,
+                "y": 5
+            },
+            "segments": [
+                196,
+                0
+            ]
+        },
+        {
+            "kind": 0,
+            "color": 0,
+            "comment": "",
+            "path": {
+                "x": 65532,
+                "y": 65535
+            },
+            "segments": [
+                199,
+                0
+            ]
+        },
+        {
+            "kind": 1,
+            "color": 0,
+            "comment": "",
+            "path": {
+                "x": 65526,
+                "y": 5
+            },
+            "segments": [
+                6,
+                0
+            ]
+        },
+        {
+            "kind": 0,
+            "color": 0,
+            "comment": "",
+            "path": {
+                "x": 65535,
+                "y": 65527
+            },
+            "segments": [
+                72,
+                0
+            ]
+        },
+        {
+            "kind": 1,
+            "color": 0,
+            "comment": "",
+            "path": {
+                "x": 65534,
+                "y": 0
+            },
+            "segments": [
+                6,
+                0
+            ]
+        },
+        {
+            "kind": 0,
+            "color": 0,
+            "comment": "",
+            "path": {
+                "x": 65535,
+                "y": 65535
+            },
+            "segments": [
+                3,
+                34,
+                1,
+                0
+            ]
+        }
+    ]
+}
