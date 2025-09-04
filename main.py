@@ -58,6 +58,7 @@ class TCGProgramSerializer(Serializer):
     key = fields.UInt64()
     name = TCGString()
 
+
 class TCGComponentSerializer(Serializer):
     kind = fields.UInt16()
     position = fields.NestedSerializer(TCGPointSerialier())
@@ -114,6 +115,8 @@ def main(argv):
     decompressed = snappy.uncompress(compressed)
 
     attrs, _ = TCGSerialier().deserialize(decompressed)
+    attrs["components"].sort(key=lambda c: c["permanent_id"])
+    attrs["wires"].sort(key=lambda w: (w["path"]["x"], w["path"]["y"], *w["segments"]))
     print(json.dumps(attrs, indent=4))
 
 
